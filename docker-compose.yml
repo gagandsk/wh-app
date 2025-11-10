@@ -1,0 +1,49 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: wheelhub_db
+      MYSQL_USER: wheelhub_user
+      MYSQL_PASSWORD: wheelhub_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    container_name: wheelhub_backend
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 3306
+      DATABASE_NAME: wheelhub_db
+      DATABASE_USER: wheelhub_user
+      DATABASE_PASSWORD: wheelhub_password
+      PORT: 4000
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - db
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    container_name: wheelhub_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend 
+    restart: always
+
+volumes:
+  db_data: {}
