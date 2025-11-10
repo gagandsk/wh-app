@@ -1,7 +1,3 @@
-# Wheelhub App
-
-¡Hola! Este repo es mi entrega para la prueba técnica Wheelhub. Lo he desarrollado desde cero, intentando mantenerlo sencillo y modular para que sea fácil de revisar y modificar.
-
 ## Estructura del proyecto
 
 El repo está dividido en el *frontend* y el *backend*:
@@ -22,9 +18,6 @@ El repo está dividido en el *frontend* y el *backend*:
 * **Axios**
 * **React Icons**
 * **TypeScript**
-
-<br>
-* *La estructura puede parecer minimalista,  para la demo me enfoqué solo en lo necesario.*
 
 ## ¿Cómo levantarlo?
 
