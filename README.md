@@ -45,16 +45,5 @@ cd frontend
 npm install
 npm run dev
 ```
-
-## Cosas que no pude terminar
-
-* Dockerizar el proyecto
-* Algunas validaciones extra en el backend.
-* La funcionalidad de *editar* (está a medias)
-* Mejoras visuales en el frontend (hay detalles que se pueden mejorar en la UI), como por ejemplo hacerlo responsive.
-* Implementar Tests unitarios y funcionales
-
-- - -
-
 <br>
 <br>
