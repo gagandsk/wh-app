@@ -8,7 +8,7 @@ const ForgotPasswordPage: React.FC = () => {
         e.preventDefault();
         console.log("Solicitando restablecimiento de contraseña...");
         alert("Instrucciones enviadas al correo. Por favor, verifica tu bandeja.");
-        navigate('/verificar-cuenta');
+        navigate('/verify/account');
     };
 
     return (

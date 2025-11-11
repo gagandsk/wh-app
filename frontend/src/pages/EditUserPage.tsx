@@ -48,7 +48,7 @@ const EditUserPage: React.FC = () => {
 
     try {
       await axios.patch(`${API_BASE_URL}/users/${id}`, formData);
-      navigate('/usuarios', { state: { success: 'Usuario actualizado correctamente' } });
+      navigate('/users', { state: { success: 'Usuario actualizado correctamente' } });
     } catch (err: any) {
       setError(err.response?.data?.message || 'Error al guardar');
     } finally {
@@ -73,7 +73,7 @@ const EditUserPage: React.FC = () => {
       <div className="main-content">
         <div style={{ textAlign: 'center', padding: '4rem' }}>
           <p>Usuario no encontrado</p>
-          <button className="btn-new" onClick={() => navigate('/usuarios')}>
+          <button className="btn-new" onClick={() => navigate('/users')}>
             ← Volver al listado
           </button>
         </div>
@@ -88,7 +88,7 @@ const EditUserPage: React.FC = () => {
 
       <div className="page-header">
         <h1 className="page-title">Editar Usuario</h1>
-        <button className="btn-new" onClick={() => navigate('/usuarios')}>
+        <button className="btn-new" onClick={() => navigate('/users')}>
           <FiArrowLeft style={{ marginRight: '8px' }} />
           Volver
         </button>
@@ -216,7 +216,7 @@ const EditUserPage: React.FC = () => {
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-end' }}>
               <button
                 type="button"
-                onClick={() => navigate('/usuarios')}
+                onClick={() => navigate('/users')}
                 style={{
                   padding: '0.75rem 1.8rem',
                   borderRadius: '10px',

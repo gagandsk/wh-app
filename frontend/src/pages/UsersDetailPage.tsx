@@ -14,7 +14,7 @@ export function UserDetailPage() {
     };
     
     const handleGoBack = () => {
-        navigate('/usuarios');
+        navigate('/users');
     };
 
     return (
@@ -33,7 +33,7 @@ export function UserDetailPage() {
             </div>
             
             <button 
-                onClick={() => navigate(`/usuarios/${id}`)}
+                onClick={() => navigate(`/users/${id}`)}
                 style={{ marginTop: '20px', backgroundColor: 'blue', color: 'white' }}
             >
                 Editar Usuario

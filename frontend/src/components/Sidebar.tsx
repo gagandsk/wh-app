@@ -42,8 +42,8 @@ const Sidebar: React.FC = () => {
       <nav>
         <ul className="sidebar-menu">
 
-          <li className={`sidebar-item ${isActive('/usuarios') ? 'active' : ''}`}>
-            <Link to="/usuarios">
+          <li className={`sidebar-item ${isActive('/users') ? 'active' : ''}`}>
+            <Link to="/users">
               <span><FiTool /></span> Usuarios
             </Link>
           </li>

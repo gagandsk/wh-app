@@ -48,7 +48,7 @@ const NewUserPage: React.FC = () => {
       const response = await axios.post(`${API_BASE_URL}/users`, formData);
       
       setSuccess(`¡Usuario Dado de alta con éxito!`);
-      setTimeout(() => navigate('/usuarios'), 2000); 
+      setTimeout(() => navigate('/users'), 2000); 
 
     } catch (err) {
       console.error('Error al crear usuario:', err);
@@ -69,7 +69,7 @@ const NewUserPage: React.FC = () => {
    <Breadcrumb sections={breadcrumbSections} />
     <div className="page-header">
       <h1 className="page-title">Crear Nuevo Usuario</h1>
-      <button className="btn-new" onClick={() => navigate('/usuarios')}>
+      <button className="btn-new" onClick={() => navigate('/users')}>
         <FiXCircle style={{ marginRight: '8px' }} />
         Cancelar
       </button>
@@ -194,7 +194,7 @@ const NewUserPage: React.FC = () => {
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-end' }}>
             <button
               type="button"
-              onClick={() => navigate('/usuarios')}
+              onClick={() => navigate('/users')}
               disabled={loading}
               style={{
                 padding: '0.75rem 1.8rem',

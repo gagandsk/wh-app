@@ -22,7 +22,7 @@ export const useBreadcrumbs = (): BreadcrumbSection[] => {
     let name = ROUTE_NAME_MAP[segment];
 
     if (!name) {
-      const isEditPath = index > 0 && pathSegments[index - 1] === "usuarios";
+      const isEditPath = index > 0 && pathSegments[index - 1] === "users";
 
       if (isEditPath) {
         name = "Editar";

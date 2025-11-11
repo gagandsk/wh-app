@@ -83,10 +83,10 @@ const Header: React.FC<HeaderProps> = ({ currentSection }) => {
             </div>
 
             <div className={`user-dropdown ${isUserDropdownOpen ? 'open' : ''}`}>
-              <button onClick={() => { setIsUserDropdownOpen(false); navigate('/perfil'); }}>
+              <button onClick={() => { setIsUserDropdownOpen(false); navigate('/profile'); }}>
                 <span><FiUser /></span> Perfil
               </button>
-              <button onClick={() => { setIsUserDropdownOpen(false); navigate('/configuracion'); }}>
+              <button onClick={() => { setIsUserDropdownOpen(false); navigate('/config'); }}>
                 <span><FiSettings /></span> Configuración
               </button>
 

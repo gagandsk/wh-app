@@ -36,7 +36,7 @@ const VerifyAccountPage: React.FC = () => {
         if (fullCode.length === CODE_LENGTH) {
             console.log("Verificando código:", fullCode);
             alert("Cuenta verificada con éxito. Accediendo al dashboard.");
-            navigate('/usuarios');
+            navigate('/users');
         } else {
             alert(`Por favor, introduce el código completo de ${CODE_LENGTH} dígitos.`);
         }

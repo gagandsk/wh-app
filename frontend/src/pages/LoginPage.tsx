@@ -7,7 +7,7 @@ const LoginPage: React.FC = () => {
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
         console.log("Intentando iniciar sesión...");
-        navigate('/usuarios');
+        navigate('/users');
     };
 
     return (

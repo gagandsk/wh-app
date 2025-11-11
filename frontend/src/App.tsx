@@ -15,8 +15,8 @@ import './styles/App.css';
 
 const MainLayout: React.FC = () => {
   
-  const currentSection = "Usuarios"; 
-  const activeSidebar = "usuarios";
+  const currentSection = "Users"; 
+  const activeSidebar = "users";
 
   return (
     <div className="App">
@@ -41,8 +41,8 @@ const App: React.FC = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/recuperar-contrasena" element={<ForgotPasswordPage />} />
-        <Route path="/nueva-contrasena" element={<ResetPasswordPage />} />
-        <Route path="/verificar-cuenta" element={<VerifyAccountPage />} />
+        <Route path="/new/password" element={<ResetPasswordPage />} />
+        <Route path="/verify/account" element={<VerifyAccountPage />} />
 
         
         <Route path="/" element={<MainLayout />}>
@@ -51,15 +51,15 @@ const App: React.FC = () => {
           <Route index element={<UsersPage />} />
 
           
-          <Route path="usuarios" element={<UsersPage />} />
-          <Route path="usuarios/nuevo" element={<NewUserPage />} />
+          <Route path="users" element={<UsersPage />} />
+          <Route path="users/new" element={<NewUserPage />} />
           
     
-          <Route path="/usuarios/info/:id" element={<UserDetailPage />} />
-          <Route path="usuarios/:id" element={<EditUserPage />} /> 
+          <Route path="/users/info/:id" element={<UserDetailPage />} />
+          <Route path="users/:id" element={<EditUserPage />} /> 
  
-          <Route path="perfil" element={<h1>👤 Perfil de Usuario</h1>} />
-          <Route path="configuracion" element={<h1>⚙️ Configuración del Sistema</h1>} />
+          <Route path="profile" element={<h1>👤 Perfil de Usuario</h1>} />
+          <Route path="config" element={<h1>⚙️ Configuración del Sistema</h1>} />
           
 
           <Route path="*" element={<h1>404 | Página No Encontrada</h1>} />

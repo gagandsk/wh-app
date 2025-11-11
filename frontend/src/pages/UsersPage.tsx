@@ -72,7 +72,7 @@ const UsersPage: React.FC = () => {
         }
     };
 
-    const handleEdit = (id: string) => navigate(`/usuarios/${id}`);
+    const handleEdit = (id: string) => navigate(`/users/${id}`);
     const handleDelete = (id: string) => setShowDeleteModal(id);
 
     const confirmDelete = async () => {
@@ -89,7 +89,7 @@ const UsersPage: React.FC = () => {
 
     const handleViewInfo = (id: string) => {
         // Redirige a /usuarios/:id (que debería mostrar la página de detalle/info)
-        navigate(`/usuarios/info/${id}`); 
+        navigate(`/users/info/${id}`); 
     };
 
     return (
@@ -100,7 +100,7 @@ const UsersPage: React.FC = () => {
                     <h1 className="page-title">Usuarios</h1>
                     <span className="page-count">{totalUsers} usuarios</span>
                 </div>
-                <button className="btn-new" onClick={() => navigate('/usuarios/nuevo')}>
+                <button className="btn-new" onClick={() => navigate('/users/new')}>
                     Nuevo usuario
                 </button>
             </div>
