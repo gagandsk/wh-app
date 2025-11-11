@@ -12,9 +12,10 @@ interface UserTableProps {
   users: User[];
   onEdit: (id: string) => void;
   onDelete: (id: string) => void;
+  onViewInfo: (id: string) => void;
 }
 
-const UserTable: React.FC<UserTableProps> = ({ users, onEdit, onDelete }) => {
+const UserTable: React.FC<UserTableProps> = ({ users, onEdit, onDelete, onViewInfo }) => {
   const [menuOpen, setMenuOpen] = useState<string | null>(null);
 
   return (
@@ -55,6 +56,12 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit, onDelete }) => {
 
                     {menuOpen === user.id && (
                       <div className={`actions-dropdown ${isLastRow ? 'dropdown-up' : ''}`}>
+                        <button 
+                                className="btn-action btn-info" 
+                                onClick={() => onViewInfo(user.id)}
+                            >
+                                Ver Info
+                            </button>
                         <button onClick={() => { setMenuOpen(null); onEdit(user.id); }}>
                           Editar
                         </button>

@@ -10,6 +10,7 @@ import RegisterPage from './pages/RegisterPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import VerifyAccountPage from './pages/VerifyAccountPage';
+import { UserDetailPage } from './pages/UsersDetailPage';
 import './styles/App.css';
 
 const MainLayout: React.FC = () => {
@@ -54,8 +55,8 @@ const App: React.FC = () => {
           <Route path="usuarios/nuevo" element={<NewUserPage />} />
           
     
+          <Route path="/usuarios/info/:id" element={<UserDetailPage />} />
           <Route path="usuarios/:id" element={<EditUserPage />} /> 
-
  
           <Route path="perfil" element={<h1>👤 Perfil de Usuario</h1>} />
           <Route path="configuracion" element={<h1>⚙️ Configuración del Sistema</h1>} />

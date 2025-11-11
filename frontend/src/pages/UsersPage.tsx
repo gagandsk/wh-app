@@ -87,6 +87,11 @@ const UsersPage: React.FC = () => {
         setShowDeleteModal(null);
     };
 
+    const handleViewInfo = (id: string) => {
+        // Redirige a /usuarios/:id (que debería mostrar la página de detalle/info)
+        navigate(`/usuarios/info/${id}`); 
+    };
+
     return (
         <div className="main-content">
             <Breadcrumb sections={breadcrumbSections} />
@@ -143,7 +148,7 @@ const UsersPage: React.FC = () => {
             {error && <p>Error: {error}</p>}
 
             {!loading && paginatedUsers.length > 0 && (
-                <UserTable users={paginatedUsers} onEdit={handleEdit} onDelete={handleDelete} />
+                <UserTable users={paginatedUsers} onEdit={handleEdit} onDelete={handleDelete} onViewInfo={handleViewInfo} />
             )}
 
             <div className="pagination">
